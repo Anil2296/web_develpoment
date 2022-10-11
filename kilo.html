@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <title>
+            anil
+        </title>
+        <script>
+            function cal(){
+            var num1=parseInt(document.getElementById('n1').value);
+            var num2=parseInt(document.getElementById('n2').value);
+               var sum=num1+num2;
+                 document.getElementById('res').value=sum;
+                
+            }
+        </script>
+        <style>
+            body{
+                background-color:antiquewhite;
+
+            }
+            .button:hover {
+          background-color: #4CAF50;
+           color: white;
+
+            }
+            
+            
+        </style>
+    </head>
+    <body style = "text-align: center; font-size: 20px";>
+     <p id="p1">Enter the first Number: <input id="n1"  ></p><br>
+        <p id="p2">Enter the second Number:<input id="n2" ></p>
+                <br>
+                <button onclick="cal()">result</button>
+                
+        <p>Sum  = <input id="res"></p>
+    </body>
+</htm>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        even
+    </title>
+    <script>
+        function even()
+        {
+            var num=document.getElementById('n1').value;
+            if(num%2==0)
+            {
+                document.getElementById('res').innerHTML ="The"  +num+ " number is Even Number"
+            }
+            else{
+                document.getElementById('res').innerHTML =" The" +num+ " number is  not Even Number "
+            }
+        }
+    </script>
+    <style>
+        body
+        {
+
+            background-color: aqua;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body style = "text-align: center; font-size: 20px;">
+    <h1>Even or Not</h1>
+    <input type="number" id="n1" placeholder="Enter a number"><br><br>
+    <button onclick="even()">click</button> <br>
+    <p id="res"></p>
+
+</body>
+    
+</html>

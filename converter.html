@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <title>
+        anil
+    </title>
+    <script type="text/javascript">
+        function metre(){
+            var met=document.getElementById('n1').value;
+            const fact=1;
+            for(var i=1;i<=met;i++)
+            {
+               fact =fact*i;
+            }
+            
+            document.getElementById('res').innerText=fact;
+        }
+    </script>
+</head>
+<body>
+    <input type="number"  placeholder="kiloMetres" id="n1">kms
+    <button onclick="metre()">coverter
+    </button>miles
+    <h1 id="res"></h1>
+    </body>
+
+</html>

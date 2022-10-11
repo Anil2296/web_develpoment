@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+        <script>
+            function clearScreen() 
+                {
+
+               document.getElementById("s1").value = "";
+                 }
+
+                
+// This function display values
+function fun(value) {
+ document.getElementById("s1").value += value;
+}
+function calculate() {
+ var p = document.getElementById("s1").value;
+ console.log(p);
+ var q = eval(p);
+ console.log(q);
+ document.getElementById("s1").value = q;
+}
+
+
+
+        </script>
+        <style>
+            body
+            {
+                
+              
+                margin-left:40% ;
+                margin-right: 70%;
+                margin-bottom: 40%;
+               
+                padding-top: 1%;
+                height: 20%;
+                
+            
+            }
+            table
+            {
+                border:3px solid black;
+                padding-left: 10%;
+                padding-right: 10%;
+            
+            }
+            
+            button:hover
+            {
+               background-color:blue;
+               color: white;
+               border-color: white;
+            }
+            button{
+                width: 70px;
+                height: 50px;
+            }
+            input
+            {
+            width: 230px;
+            height: 50px;
+            border: 1px solid black;
+            }
+            .bt
+            {
+                width:70px;
+                height: 50px;
+                background-color: blue;
+                border-color: white;
+                color: white;
+            }
+            .et
+            {
+                width:70px;
+                height: 50px;
+                background-color: blue;
+                border-color: white;
+                color: white;
+            }
+        
+            
+        </style>
+    </head>
+    <body align="center">
+              
+        <table align="center" width="15%" height="30%" >
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="s1">
+                </td>
+                <td>
+                     <button class="bt"  onclick="clearScreen()">AC</button>
+                </td>
+            </tr>
+           
+        <tr>
+
+            <td>
+               <button      onclick="fun('7')" id="n1" >7</button> 
+            </td>
+            <td>
+               <button   onclick="fun('8')">8</button> 
+            </td>
+
+            <td><button   onclick="fun('9')">9</button>
+                </td>
+            <td>
+               <button onclick="fun('+')">+</button>
+            </td>
+        </tr>
+    <tr>
+        <td>
+           <button         onclick="fun('4')">4</button> 
+        </td>
+        <td>
+            <button     onclick="fun('5')">5</button>
+        </td>
+        <td>
+            <button    onclick="fun('6')">6</button>
+        </td>
+        <td>
+           <button  v  onclick="fun('/')">/</button> 
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+           <button    onclick="fun('1')">1</button> 
+        </td>
+    <td>
+        <button    onclick="fun('2')">2</button>
+    </td>
+    <td>
+       <button    onclick="fun('3')">3</button> 
+    </td>
+    <td>
+       <button   onclick="fun('*')">*</button> 
+    </td>
+    <tr>
+        <td>
+           <button   onclick="fun('0')">0</button> 
+        </td>
+        <td>
+           <button    onclick="fun('.')">.</button> 
+        </td>
+        <td>
+         <button  class="et"  onclick="calculate()">=</button>   
+        </td>
+        <td>
+          <button    onclick="fun('-')">-</button>  
+        </td>
+    </tr>
+        </table>
+        
+    </body>
+</html>

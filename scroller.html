@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            scroller
+        </title>
+        <style>
+            .container
+            {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                width: 100%;
+                gap: 20px;
+            }
+            .container>.item
+            {
+                min-width: 100%;
+                scroll-snap-align: start;
+                height: 50px;
+                text-align: center;
+                scroll-snap-align: center;
+            }
+            body{
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class ="item">1></div>
+        <div class ="item">2 <img src="sasi image2.jpeg" alt=""></div>
+        <div class ="item">3</div>  
+        <div class ="item">4</div>
+        </div>
+    </body>
+</html>

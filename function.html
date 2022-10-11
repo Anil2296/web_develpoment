@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <title>
+        fun
+    </title>
+    <script>
+        function big()
+        {
+            var a,b,c;
+             a = parseInt(document.getElementById('n1').value);
+             b = parseInt( document.getElementById('n2').value);
+             c = parseInt(document.getElementById('n3').value);
+            let lar=0;
+            console.log(typeof(a));
+            if(a>b && a>c)
+            {
+               lar=a;
+               console.log(lar);
+            }
+            else if(b>c)
+            {
+                lar=b;
+                console.log(lar);
+            }
+            else
+            {
+                 lar=c;
+                 console.log(lar);
+            }
+            console.log(a,b,c,lar);
+            document.getElementById('res').innerHTML="The biggest number is "+lar;
+        }
+    </script>
+    <style>
+        body
+        {
+        
+            font-style: italic;
+            border-style: ridge;
+            margin-top: 100px;
+            margin-bottom: 200px;
+            margin-left: 400px;
+            margin-right: 400px;
+            border-radius: 5px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius:20px ;
+            border-top-left-radius: 21px;
+            border-top-right-radius: 23px;
+       border-color:red;
+            
+        
+            
+        }
+            
+        #n1:hover
+        {
+            border-color: blue;
+          
+        }
+        input:active
+        {
+            border-color: aqua;
+        }
+        #n2:hover
+        {
+            border-color: blue
+        }
+        #n3:hover{
+            border-color: blue
+        }
+        button:hover
+        {
+            color:black;
+        }
+        button
+        {
+            background-color: blue;
+            color: white;
+            width: 50px;
+            cursor: pointer;
+        
+        }
+        h1{
+            background-color: brown;
+            padding: 5px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        
+        
+        }
+    </style>
+    
+</head>
+<body style="text-align: center; font-size: 20px";>
+    <h1>Biggest of Three Numbers</h1>
+   <p> Enter first number<input type="number" id="n1"></p><br>
+   <p> Enter Second number<input type="number" id="n2"></p><br>
+   <p> Enter third number<input type="number" id="n3"></p><br><br>
+    <button onclick="big()">click</button>
+    <h2 id="res"></h2>
+</body>
+</html>

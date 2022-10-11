@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>
+            palindrome
+        </title>
+    </head>
+    <style>
+         button{
+            background-color:green;
+            font-size: small;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            padding:3px;
+            color: white;
+            margin-top: 20px;
+            margin-left: 20px;
+            border-color: white;
+            }
+        button:hover
+        {
+            border-color: darkolivegreen
+        }
+            body
+            {
+                margin-top: 10%;
+            }
+        input
+            {
+                width: 250px;
+                border-color: black;
+                
+            }
+            div
+            { 
+                background-color:black;
+                border: ridge;
+               border-radius: 20px;
+               border-style:groove;
+                border-color:black;
+                margin-left: 350px;
+                margin-right: 350px;
+                padding-top: 50px;
+                padding-bottom: 100px;
+                cursor: pointer;
+            }
+            #n1:hover
+            {
+                border-color: aqua;
+            }
+            h1
+            {
+                color: white;
+            }
+           
+           
+    </style>
+    <script>
+        function fun()
+        {
+            
+            var a,rem=0,sum=0;
+            a= parseInt(document.getElementById('n1').value);
+            var temp=a;
+            
+                while(a>0)
+                {
+                  rem=a%10;
+                  sum=(sum*10)+rem;
+                  a=Math.floor(a/10);
+                }
+                if(temp==sum)
+                {
+                    document.getElementById('c2').innerHTML="The given number is palindrome";
+                }
+                else{
+                    document.getElementById('c2').innerHTML="The given number is  not palindrome";
+                }
+            }
+                function fun1()
+                {
+                    var a= parseInt(document.getElementById('n1').value);
+                    console.log(a);
+                    let count=0;
+                    temp1=a;
+                for(var i=1;i<temp1;i++)
+                {
+                    if(temp1%i==0)
+                    {
+                        count++;
+                        console.log(count);
+
+                    }
+                }
+
+                if(count==1)
+                {
+                    document.getElementById('c2').innerHTML="The given number is   prime";   
+                }
+                else{
+                    document.getElementById('c2').innerHTML="The given number is not prime";
+                }
+            }
+            function fun2()
+            {   
+                var rem=0,sum=0,count=0;
+                var a= parseInt(document.getElementById('n1').value);
+                console.log(a);
+                temp2=a;
+                temp3=a;
+                while(a>0)
+                {
+                   a=Math.floor(a/10);
+                      count++;
+                      console.log(count);
+                } 
+                while(temp2>0)
+                {
+                    rem=temp2%10;
+                    console.log(rem);
+
+                    sum=sum+Math.pow(rem,count);
+                    console.log(sum);
+                    temp2=Math.floor(temp2/10);
+                    console.log(temp2);
+                }
+                if(sum==temp3)
+                {
+                    document.getElementById('c2').innerHTML="The given number is  Armstrong Number";
+                }
+                else
+                {
+                    document.getElementById('c2').innerHTML="The given number is not Armstrong";
+                }
+                }
+                
+                
+
+            
+    </script>
+    <body  style="text-align: center;">
+         
+             <div>
+             <input type="number" id="n1" placeholder="Enter"><br>
+            <br>
+            <button onclick="fun()">palindrome</button>
+            <button onclick="fun1()">Prime</button>
+            <button onclick="fun2()">Armstrong</button><br>
+            <h1 id="c2"></h1>
+            </div>
+        
+        
+<br><br>
+
+            <br><br>
+           
+    </body>
+</html>

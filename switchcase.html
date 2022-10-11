@@ -1,0 +1,82 @@
+<html>
+    <head>
+    <title>
+        
+        switch
+    </title>
+    <script>
+        function fun()
+        {
+            var s4;
+            var s1=parseInt(document.getElementById('n1').value);
+            console.log(s1);
+            var s2=parseInt(document.getElementById('n2').value);
+            console.log(s2);
+            var s3=document.getElementById('a1').innerHTML;
+            console.log(typeof(s3));
+            if(s2==0)
+            {
+                alert("divison is not possible");
+            }
+            if(s3=='+')
+            {
+                 s4=s1+s2;
+                 document.getElementById('s5').innerHTML=s4;
+            }
+            switch(s3)
+            {
+               case '+':
+                        s4=s1+s2;
+                        document.getElementById('s5').innerHTML=s4;
+                       break;
+
+            case '-':
+            
+                    s4=s1-s2;
+                    document.getElementById('s5').innerHTML=s4;
+                    break;
+
+            case'*':
+            
+                  s4=s1*s2;
+                    document.getElementById('s5').innerHTML=s4;
+                    break;
+
+            
+            case '/':
+        
+                s4=s1/s2;
+                document.getElementById('s5').innerHTML=s4;
+                break;
+
+
+            case '%':
+                s4=s1%s2;
+                document.getElementById('s5').innerHTML=s4;
+                break;
+
+
+            }
+           
+
+
+        }
+    </script>
+    </head>
+    <body>
+        <h1>switch case </h1>
+        <input type="number" id="n1" placeholder="enter a number">
+        <br><br>
+        <input type="number" id="n2" placeholder="enter a number">
+        <select id="c1">
+            <option id="a1">'+'</option>
+            <option id="a2">-</option>
+            <option id="a3">*</option>
+            <option id="a4">/</option>
+            <option id="a1">%</option>
+        </select>
+        <br>
+        <button onclick="fun()"> click</button>
+        <h1 id="s5"></h1>
+    </body>
+</html>
