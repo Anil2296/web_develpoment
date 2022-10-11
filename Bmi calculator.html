@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>
+            BMI
+        </title>
+        <script>
+            function Bmi()
+            {
+                var a,b;
+                 a = parseFloat(document.getElementById('n1').value);
+                 b = parseFloat( document.getElementById('n2').value);
+                let lar=0;
+                var count=0;
+                console.log(typeof(a));
+                console.log(typeof(b));
+                let c = (a / ((b * b) 
+                            / 10000)).toFixed(2)
+                console.log(lar);
+                
+                    var img = document.createElement("img");
+                  
+                if(c<18.6)
+                {
+                    img.src = "less weight.jpg";
+                    img.setAttribute("style", "margin-top: 50px;");
+                    img.setAttribute("style", "height:80;");
+                    img.setAttribute("style", "width:100;");
+                    var div = document.getElementById("x");
+                    div.appendChild(img);
+                    div.setAttribute("style", "text-align:center");
+                    document.getElementById("k").innerHTML="under weight";
+                                    
+
+                }
+                else if(c>=18.6&&c<24.9)
+                {
+                    img.src = "healthy.jpeg";
+                    img.setAttribute("style", "margin-top: 50px;");
+                    var div = document.getElementById("x");
+                    div.appendChild(img);
+                    div.setAttribute("style", "text-align:center");
+                    document.getElementById("k").innerHTML="Healthy"; 
+                }
+                else if(c>=24.9&&c<29.9)
+                {
+                    img.src = "over weight.jpeg";
+                    img.setAttribute("style", "margin-top: 50px;");
+                    var div = document.getElementById("x");
+                    div.appendChild(img);
+                    div.setAttribute("style", "text-align:center");
+                    document.getElementById("k").innerHTML="over weight";
+                 
+                }
+                else if(c>=29.9)
+                {
+                    img.src = "obesity.jpeg";
+                    img.setAttribute("style", "margin-top: 50px;");
+                    var div = document.getElementById("x");
+                    div.appendChild(img);
+                    div.setAttribute("style", "text-align:center");
+                    document.getElementById("k").innerHTML="Obesity";
+                   
+                 
+                }
+                else
+                {
+                    alert("Fill The Data");
+                }
+                
+
+                
+            }
+        </script>
+        <script>
+            function hide()
+            {
+                document.getElementById("p").reset();
+            }
+        </script>
+      </head>
+      <style>
+        table
+        {
+             
+            background-color: navy;
+            padding: 50px;
+            margin-top: 50px;
+            margin-top: 50px;
+        }
+        input
+        {
+            height: 30px;
+        }
+        caption
+        {
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: calc();
+            
+        }
+        button
+        {
+            background-color:green;
+            color: white;
+            width: 70px;
+            height: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 100px;
+            margin-right: 100px;
+            border-color:white;
+            border: 2px;
+            
+            
+        
+        }
+        button:hover
+        {
+            color:black;
+        }
+       
+        h2
+        {
+             color:white;
+        }
+        l
+        {
+            color:black; 
+        }
+        u
+        {
+            color: white;
+        }
+        
+     
+  
+      </style>
+     
+    <body >
+  
+        
+
+        <table align="center">
+            <caption><h1 id=l >BMI Calculator</h1></caption>
+            <tr>
+                <td>
+                    <h2> Enter Your Weight :</h2>
+                </td>
+                <td>
+                    <input type="number" id="n1" placeholder="KG" >
+                </td>
+            </tr>
+            
+                <tr>
+                    <td>
+                        <h2> Enter Your height :</h2>
+                    </td>
+                    <td>
+                        <input type="number" id="n2" placeholder="CM">
+                    </td></tr>
+
+                    <tr>
+                        <td>
+                           <center><button id="a2" onclick = "Bmi()">SUBMIT </button> </center> 
+                            </td>
+                            <form id="p">
+                                <td>
+                                    <button  id ="a1"onclick="hide()">RESET</button></td></form>
+                                    </tr>
+                                   <tr>
+                                     <td>  <u><i><h2 id="k" align="center"></h2></i></u></td> 
+                                      <td>  <div id="x"></div></td>
+                                   </tr>
+                                  
+                                    
+                                   
+                                 
+                                  
+                                   
+                                
+                         
+    
+        </table>
+      
+    </body>
+
+</html>
+
+
